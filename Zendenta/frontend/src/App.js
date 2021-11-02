@@ -7,16 +7,19 @@ import Messages from './pages/Messages'
 import PaymentInfo from './pages/PaymentInfo'
 import Settings from './pages/Settings'
 import GlobalStyle, { MainContent } from './GlobalStyles';
+import AppointmentModal from './components/Modal/AppointmentModal';
+
 
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
+      {/* <AppointmentModal /> */}
       <div className="App">
         <Sidebar />
         <MainContent>
-          <Navbar />
+          <Navbar menuName='Calendar' />
           <Switch>
             <Route path='/' exact>
               <Overview />

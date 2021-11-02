@@ -1,10 +1,28 @@
-import React from 'react'
-import { Nav } from './Navbar.element'
+import React, { useState } from 'react'
+import { Nav, NavLeft, NavRight } from './Navbar.element'
+import { createAppointment } from '../../actions/appointmentActions'
+import { useDispatch, useSelector } from 'react-redux'
 
-const Navbar = () => {
+
+const Navbar = (props) => {
+
+    const dispatch = useDispatch()
+
+
+    // const createAppointmentHandler = ()=>{
+    //     dispatch(createAppointment)
+    // }
+
+    // const [showModal, setShowModal] = useState(false)
+
     return (
         <Nav>
-            Navbar
+            {/* onClick={() => setShowModal(!showModal)} */}
+            <NavLeft>
+                <i className="fas fa-plus-circle"></i>
+            </NavLeft>
+            <NavRight>NavRight</NavRight>
+
         </Nav>
     )
 }

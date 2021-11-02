@@ -32,7 +32,7 @@ const MainOverview = () => {
                         <UpcomingAppointment>
                             <CardButton title='Upcoming Appointments' size='small'>
                                 <h1>14</h1>
-                                <p><i class="fad fa-file-check"></i></p>
+                                <p><i className="fad fa-file-check"></i></p>
                             </CardButton>
                         </UpcomingAppointment>
                     </RequestCardUp>

@@ -56,7 +56,30 @@ export const MoreButton = styled.button`
     box-sizing:border-box;
 `
 
+export const BackDrop = styled.div`
+height:${(props) => props.showModal ? '100vh' : '0'};
+width:100vw;
+position:fixed;
+top:0;
+left:0;
+background-color: rgba(0,0,0,0.75);
+z-index:999;
+`
 
+export const Button = styled.button`
+padding:10px;
+background-color: ${(props) => props.color ? props.color : 'blueviolet'};
+width: ${(props) => props.width ? props.width : '100px'};
+font-size:large ;
+cursor: pointer;
+color:white;
+`
+
+export const GlobalButton = ({ children, color }) => {
+    return (
+        <Button color={color} >{children}</Button>
+    )
+}
 
 
 
